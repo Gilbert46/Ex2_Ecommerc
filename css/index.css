@@ -1,0 +1,104 @@
+body{
+    padding: 2%;
+    font-family: 'Ubuntu', sans-serif;
+}
+nav{
+    padding: 2%;
+    display: inline-flex;
+    background: #ddd;
+    width: 98%;
+    text-align: center;
+}
+img{
+    margin-top: 2%;
+}
+h1{
+    margin-right: 35%;
+    margin-top: 3%;
+}
+#logo{
+    width: 10%;
+    border: 2px solid #444;
+}
+#buto{
+    border: 2px solid #444;
+}
+#buto:hover, #logo:hover{
+    border: 2px solid #fff; 
+}
+#txt{
+    margin-left: 5%;
+    height: 30px;
+    width: 33%;
+}
+select{
+    height: 30px;
+}
+header{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background: #999;
+    text-align: center;
+    width: 98%;
+}
+#shearch{
+    border: 3px solid #999;
+}
+#shearch:hover{
+    border: 3px solid #111;
+}
+section{
+    margin: 1px auto;
+    width: 94%;
+}
+#colum{
+    display: block;
+    border: 2px solid navy;
+    width: 90%;
+    height: 200px;
+    margin-top: 5%;
+
+}
+#help{
+    margin-top: 50px;
+    padding: 2%;
+    background: #999;
+    color: #fff;
+    width: 98%;
+}
+footer{
+    background: #ddd;
+    text-align: center;
+    width: 98%;
+}
+#enl{
+    width:3%;
+    margin-right: 2%;
+    margin-bottom: 1%;
+    border: 3px solid #fff;
+}
+#buto2{
+    border: 3px solid #999;
+    margin-bottom: 2%;
+}
+#buto3{
+    border: 3px solid #999;
+    margin-bottom: 3%;
+    margin-left: 3%;
+}
+#logo2{
+	width: 5%;
+	border: 3px solid #ddd;
+}
+#enl:hover, #logo2:hover, #buto2:hover, #buto3:hover{
+    border: 3px solid #444;
+}
+#formulari, #formulari2, #formulari3{
+    background: whitesmoke;
+    margin: 10px auto;
+    width: 50%;
+}
+#passw{
+    width: 32%;
+}
+

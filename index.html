@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- CSS propi-->
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <!-- JS propi -->
+    <script src="js/index.js" type="text/javascript"></script>
+    <!-- títol de l'aplicació -->
+    <title>E-Commerc</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container" id="navegador">
+            <a class="navbar-brand" href="#"><img src="img/logo.png" width="50" alt="logo" />  <b><i> Book E-Commerc</i></b></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><img id="buto" width="30" height="30" src="img/regis.png" alt="registrar" 
+                        onclick="register()" />Registrarse</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><img id="buto" width="30" height="30" src="img/login.png"  alt="logIn" onclick="iniciar()" />Inicio sesión</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="http://www.google.com"><img id="buto" width="30" height="30" src="img/salir.png" alt="salir" />Salir</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> 
+    <header >
+        <div id="formulari" hidden="">
+            <div class="container">
+                <div class="row">
+                    <div  class="col-lg-12 text-center">
+                        <h3><i>Formulario de registro</i></h3>
+                        <form type="button">
+                            <label for="email1">Email:</label>
+                            <input id="email1" type="text" placeholder="Introducir email..." />
+                            <label for="provi">Provincia:</label>
+                            <select id="provi">
+                                <option>Barcelona</option>
+                                <option>Girona</option>
+                                <option>Lleida</option>
+                                <option>Tarragona</option>
+                                <option>Castellón</option>
+                                <option>Valencia</option>
+                                <option>Alicante</option>
+                                <option>Mallorca</option>
+                                <option>Menorca</option>
+                                <option>Ibiza</option>
+                            </select><br/>
+                            <label for="passw1">Contraseña</label>
+                            <input id="passw1" type="text" id="passw" placeholder="de 3 o mas letras..."/>
+                            <label for="passw2">Contraseña</label>
+                            <input id="passw2" type="text" id="passw" placeholder="repetir contraseña..."/><br/>
+                            <label for="user1">Usuario: </label>
+                            <input type="radio" name="user" checked>
+                            <label for="client1">Cliente</label>
+                            <input type="radio" name="user">
+                            <label for="admin1">Administrador</label><input type="text" placeholder="clave"/><br/>
+                            <img id="buto2" width="60" height="30" src="img/enviar.png" alt="salir" onclick="tornar()"/>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="formulari2" hidden="">
+            <div class="container">
+                <div class="row">
+                    <div  class="col-lg-12 text-center">
+                        <h3><i>Iniciar sesión</i></h3>
+                        <form type="button">
+                            <label for="email2">Email</label>
+                            <input id="email2" type="text" placeholder="Introducir email..." /><br/>
+                            <label for="passw3">Contraseña</label>
+                            <input id="passw3" type="text" placeholder="de 3 o mas letras..."/><br/>
+                            <label for="user2">Usuario: </label>
+                            <input type="radio" name="user" checked />
+                            <label for="client2">Cliente</label>
+                            <input type="radio" name="user" />
+                            <label for="admin2">Administrador</label><input type="text" placeholder="clave"/><br/>
+                            <img id="buto2" width="60" height="30" src="img/entrar.png"  alt="salir" onclick="tornar()"/>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="cercador">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <form type="button">
+                        <input id="txt" type="text" placeholder="introducir un libro para buscar ...."/>
+                        <select>
+                            <option>Filtro1_Opcion1</option>
+                            <option>Filtro1_Option2</option>
+                            <option>Filtro1_Option3</option>
+                        </select>
+                        <input type="checkbox" />
+                        <select>
+                            <option>Filtro2_Opcion1</option>
+                            <option>Filtro2_Option2</option>
+                            <option>Filtro2_Option3</option>
+                        </select>
+                        <input type="checkbox" />
+                        <button id="shearch" type="submit">Buscar</button>
+                        <img id="buto3" width="40" height="40" src="img/carro.png"  alt="carro" onclick="comprar()" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="formulari3" hidden="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h3>Comanda de entrega</h3>
+                        <form type="button">
+                            <label>VISA</label>
+                            <input type="radio" name="target" ckecked />
+                            <label>Pal-Mal</label>
+                            <input type="radio" name="target" />
+                            <label>Otros</label>
+                            <input type="radio" name="target" /></form></br>
+                            <label>Número de targeta</label><input type="text" placeholder="código de la tageta" /><br/>
+                            <img id="buto2" width="60" height="30" src="img/compra.png"  alt="comprar"  onclick="tornar()"/>
+                        </form> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 text-center">
+                        <di id="colum"><img src="" alt="libro1" /></di>
+                        <div id="colum"><img src="" alt="libro5" /></div>
+                        <div id="colum"><img src="" alt="libro9" /></div>
+                        <div id="colum"><img src="" alt="libro13" /></div>
+                </div>
+                <div class="col-sm-3 text-center">
+                        <div id="colum"><img src="" alt="libro2" /></div>
+                        <div id="colum"><img src="" alt="libro6" /></div>
+                        <div id="colum"><img src="" alt="libro10" /></div>
+                        <div id="colum"><img src="" alt="libro14" /></div>
+                </div>      
+                <div class="col-sm-3 text-center">
+                        <div id="colum"><img src="" alt="libro3" /></div>
+                        <div id="colum"><img src="" alt="libro7" /></div>
+                        <div id="colum"><img src="" alt="libro11" /></div>
+                        <div id="colum"><img src="" alt="libro15" /></div>
+                </div>
+                <div class="col-sm-3 text-center">
+                        <div id="colum"><img src="" alt="libro4" /></div>
+                        <div id="colum"><img src="" alt="libro8" /></div>
+                        <div id="colum"><img src="" alt="libro12" /></div>
+                        <div id="colum"><img src="" alt="libro16" /></div>      
+                </div>
+            </div>
+        </div>
+    </section>
+	<div id="help">
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis doloribus totam numquam excepturi quos exercitationem ducimus consequatur sint cumque obcaecati officiis atque animi dolore, sunt ipsa explicabo optio quo? Repellendus, dolorum aut eos ab, laudantium blanditiis facilis quasi qui itaque odio officiis unde autem alias tenetur, cumque omnis quae et eum quisquam soluta ad vitae corrupti laboriosam sequi! Quasi beatae distinctio, optio debitis eveniet asperiores nostrum voluptas. Assumenda praesentium veritatis soluta delectus dolor illum. Vero corporis similique at voluptatem dolor consequuntur molestiae quis quisquam? Non suscipit possimus, perferendis sequi pariatur minima, amet ex maiores quasi dolores a explicabo sed hic.
+             </p>            
+         </div>
+    <footer>
+        <div class="container">
+            <div id="colum2">
+                <a href="#"><img id="logo2" src="img/logo.png" alt="logo" /></a>
+            </div>
+            <div id="colum2">
+                <a href="https://www.google.com/intl/es/gmail/about/#">
+                    <img id="enl" src="img/g+.png" alt="G+"/>
+                </a>
+                <a href="https://twitter.com/">
+                    <img id="enl" src="img/twi.png" alt="tw" />
+                </a>
+                <a href="https://www.facebook.com/">
+                    <img id="enl" src="img/fbo.png" alt="Fb" />
+                </a>
+                <a href="https://www.instagram.com/">
+                    <img id="enl" src="img/inst.png" alt="In" />
+                </a>  
+            </div>
+            <p>Copyright 20xx - 20xx - xxxx Privacity Politic</p>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
